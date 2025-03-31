@@ -1,0 +1,28 @@
+# Gradle files
+.gradle/
+build/
+localstack_data/
+my-localstack-data/
+volume/
+testbucket/
+rabbitmq/
+Documents/
+
+# Java files
+*.class
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
