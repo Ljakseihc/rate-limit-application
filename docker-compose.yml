@@ -1,0 +1,27 @@
+services:
+  redis:
+    image: redis:7.4.2
+    restart: always
+    ports:
+      - "6380:6379"
+    networks:
+      - rate-limit-service-net
+
+#  rate-limit-service:
+#    build:
+#      context: ./rate-limit-service
+#    container_name: rate-limit-service
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - redis
+#    networks:
+#      - rate-limit-service-net
+
+networks:
+  rate-limit-service-net:
+    driver: bridge
+
+volumes:
+  redis:
+    driver: local
