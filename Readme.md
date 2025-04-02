@@ -22,7 +22,7 @@ docker compose up -d
 
 2. Try to connect to Redis Cluster
 ```shell
-docker run -it --rm --network=redis_default redis:7.0.5-alpine redis-cli -c -h redis-master-0 -p 30000
+docker run -it --rm --network=rate-limit-application_default redis:7.0.5-alpine redis-cli -c -h redis-master-0 -p 30000
 ```
 
 3. Get cluster info (inside Redis CLI):
