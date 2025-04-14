@@ -1,7 +1,6 @@
 package com.epam.jmp.redislab.configuration.ratelimit;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Objects;
@@ -42,6 +41,14 @@ public class RateLimitRule {
 
     public Optional<String> getRequestType() {
         return requestType;
+    }
+
+    public RateLimitTimeInterval getTimeInterval() {
+        return timeInterval;
+    }
+
+    public Integer getAllowedNumberOfRequests() {
+        return allowedNumberOfRequests;
     }
 
     @Override

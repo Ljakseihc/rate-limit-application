@@ -6,8 +6,5 @@ import java.util.Set;
 
 public interface RateLimitService {
 
-    default boolean shouldLimit(Set<RequestDescriptor> requestDescriptors) {
-        return false;
-    }
-
+    boolean shouldLimit(Set<RequestDescriptor> requestDescriptors);
 }

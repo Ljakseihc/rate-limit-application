@@ -1,6 +1,7 @@
 package com.epam.jmp.redislab.api;
 
 import com.epam.jmp.redislab.service.RateLimitService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,7 @@ public class FixedWindowRateLimitController {
 
     private final RateLimitService rateLimitService;
 
+    @Autowired
     public FixedWindowRateLimitController(RateLimitService rateLimitService) {
         this.rateLimitService = rateLimitService;
     }

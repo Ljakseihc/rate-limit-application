@@ -25,7 +25,8 @@ class FixedWindowRateLimitControllerTest {
 
     @Container
     public static DockerComposeContainer environment =
-            new DockerComposeContainer(new File("src/test/resources/redis/docker-compose.yaml"))
+//            new DockerComposeContainer(new File("src/test/resources/redis/docker-compose.yml"))
+            new DockerComposeContainer(new File("docker-compose.yml"))
                     //this regexp identifies log entry for successfully cluster creation
                     .waitingFor("redis-init-cluster", Wait.forLogMessage(".*All 16384 slots covered.*", 1));
 
